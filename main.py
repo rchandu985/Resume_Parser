@@ -20,27 +20,36 @@ class process_incoming_files:
         key=[]
 
         for r in str(text).split("\\n"):
-            
+            r=r.replace("\\t","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","")
             if r.endswith(":") or "&" in r:
                 r=r.replace(":","").replace("&"," ")
-                
+            if r.endswith(" "):
+                r=r[:len(r)-1]    
+            if r.startswith(" "):
+                r=r[1::]
                 
             keys=resume_keys.all_keys()
             if r!="" :
                 
                 if r.lower().replace("_"," ").replace("-"," ") in keys:
-                    
+                    #print("key",r.lower())
                     op.update({r.lower():[]})
                     
                     key.append(r.lower())
                 else:
                     if len(key)>0:
-                        op[key[-1]].append(re.sub(' +', ' ', r).replace("\\t","").replace("\\","").replace("xefx82xb7",""))
+                        #print("data",r)
+                        op[key[-1]].append(re.sub(' +', ' ', r).replace("\\t","").replace("\\","").replace("xefx82xb7","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0",""))
+                    else:
+                        #print("else",r,len(r))
+                        pass
 
         output=extracted_data_processing.process(op,file)
         process_incoming_files.availble_files.add(file)
         #print(output)
-        with open(f"output/{file}.json","a") as f:
+        #print(op)
+        
+        with open(f"output/{file.replace('.docx','')}.json","a") as f:
             f.write(json.dumps([output],indent=4))
     
     def pdf_to_word_convert(file):
@@ -66,8 +75,9 @@ class process_incoming_files:
             except:
                 continue
 process_incoming_files.load_file()
-process_incoming_files.remove_processed_files()
+#process_incoming_files.remove_processed_files()
 
 
 
 
+""
