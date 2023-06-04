@@ -20,7 +20,7 @@ class process_incoming_files:
         key=[]
 
         for r in str(text).split("\\n"):
-            r=r.replace("\\t","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","")
+            r=r.replace("\\t","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","").replace("xe2x80xa2","")
             if r.endswith(":") or "&" in r:
                 r=r.replace(":","").replace("&"," ")
             if r.endswith(" "):
@@ -39,7 +39,7 @@ class process_incoming_files:
                 else:
                     if len(key)>0:
                         #print("data",r)
-                        op[key[-1]].append(re.sub(' +', ' ', r).replace("\\t","").replace("\\","").replace("xefx82xb7","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0",""))
+                        op[key[-1]].append(re.sub(' +', ' ', r).replace("\\t","").replace("\\","").replace("xefx82xb7","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","").replace("xe2x80xa2",""))
                     else:
                         #print("else",r,len(r))
                         pass
@@ -75,9 +75,7 @@ class process_incoming_files:
             except:
                 continue
 process_incoming_files.load_file()
-#process_incoming_files.remove_processed_files()
+process_incoming_files.remove_processed_files()
 
 
 
-
-""

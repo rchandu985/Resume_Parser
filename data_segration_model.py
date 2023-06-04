@@ -147,16 +147,17 @@ class extracted_data_processing:
                         extracted_data_processing.segregated_data['Skills_2'].append(f_data.lower())
 
         p_data = ResumeParser(f"incoming/{file}").get_extracted_data()
-        
-        '''for skls in p_data['skills']:
-            k=list(extracted_data_processing.segregated_data['Skills_1'].keys())
+        if "technical proficiency" in keys:
+            for skls in data["technical proficiency"]:
+                k=list(extracted_data_processing.segregated_data['Skills_1'].keys())
 
-            if skls not in k: 
-                extracted_data_processing.segregated_data['Skills_1'].update({skls:"NA"})
-                extracted_data_processing.segregated_data['Skills_2'].append(skls.lower())
-        
+                if skls not in k:
+                    if skls !=":" and skls!="": 
+                        extracted_data_processing.segregated_data['Skills_1'].update({skls:"NA"})
+                        extracted_data_processing.segregated_data['Skills_2'].append(skls.lower())
+               
         extracted_data_processing.segregated_data.update({"Skills_2":list(set(extracted_data_processing.segregated_data['Skills_2']))})
-        '''
+        
         
 
 
