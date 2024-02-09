@@ -1,0 +1,267 @@
+ashish bandgar
+full-stack web developer / javascript engineer / elk modeler
+phone: +1-(704)-281-1546, email: ashish617b@gmail.com
+professional profile
+3+ years of development experience as full-stack web developer with high proficiency in requirement 
+gathering and modeling including design and analysis of web pages of applications, defining structure and 
+presentation on pages in any environment.
+analyze the business requirements, research validity of requirement, create understanding document. 
+identify the data points and prepare key process indicators (kpis), metrics that highlights various performance 
+measures.
+performing ad hoc analysis for business case and its impact on rest of the design. providing developer point 
+of view.
+excellence in delivering quality conceptual, logical mock ups for the design deliverable for multiple projects
+involving enterprise new and existing applications. provide inputs on ui/ux based on current technology
+stack in use.
+expertise in javascript, html, express, json and jquery to handle enterprise level web applications with
+deal with high amount of data. exposure to working with d3 and charts.js to create visualizations.
+extensive experience in using html/css, css less, handlebar.js to create quick templating and rapid
+delivery. experienced with node.js. restful api development. experience with frameworks like angular and
+ruby on rails.
+highly proficient with git. expert in jira and confluence usage.
+expert at using aws integration and cloud services. exposure to ibm cloud services.
+exposure to tealium tag management and digital analytics area. use db2 for database handling.
+expert at handling stream data using elk for visualizations and integration with web.
+experienced in understanding of business process flow, sdlc life cycle (v-model, waterfall, and agile).
+understanding of ci/cd paradigm. use ci/cd pipeline process in ibm cloud.
+worked on forward and reverse engineering processes. extensive experience working in an agile
+methodology.
+perform testing using testcafe, cucumber and jasmine, junit. testrail for test management and
+documentation.
+participated in understanding and gathering the business requirements to create use cases, workflows and
+powerpoint presentations, write functional specifications and queries.
+areas of expertise
+web development, javascript and html, ibm cloud/bluemix, cloud foundry apps.
+javascript, handlebars, angular and node.js, aws, ibm cloud.
+web mockup, requirement understanding and analysis of business requirements with a 360
+view.
+educational publication & certification
+touchless writer: recognizing various hand gestures using artificial neural networks
+through webcams and objects, international journal of advance foundation and research in
+computer, vol.2, special edition. issn – 2348-4853.
+kubernetes and ibm cloud container service: ibm
+ibm cloud garage method explorer: ibmcompetencies
+primary
+javascript, html, css
+express.js, handlebar.js
+node.js and angular
+ruby on rails, aws
+sql, db2, jira, confluencesecondary
+mysql db, sql server db.
+regex, backend development
+mongodb, cucumber, elk.
+jasmine, bugzilla
+r language, c++, core java
+educational summary
+master of science in computer science [gpa = 3.5 / 4.0]           [august 2016 -
+december 2017]
+university of north carolina - charlotte, north carolina, usa
+bachelor of engineering in computer engineering [distinction]                [july
+2012 – july 2015]
+university of pune, maharashtra, india
+project details:
+ibm corporation, austin texas        [january 2018 to
+present]
+full-stack web developer
+the goal of this project is to support digital marketing team to make sure the marketing decisions taken, are
+reflected on ibm pages. make sure marketing tags, information is relevant and done perfectly with respect to
+each url. create metrics, to capture all the data with respect to that url. use technologies like tealium tag
+management, for analyzing and creating marketing tags. lotame, drupal, to effectively use the web stack. use
+ibm cloud and ci/cd pipelines for deployment. create new functionalities in existing applications which confirm
+to standards. these pages and functionalities act as support mechanism when we need system wide changes to
+be implemented across millions of pages. another project worked on was gdpr compliance for ibm. making
+sure all ibm pages are gdpr compliant. develop contingency plans for urls which are not compliant. work with
+stake holders to identify critical issues and streamline priorities.
+responsibilities:
+gathering business requirements from different stakeholders.
+performing ad hoc analysis around customers experience on the different platforms and try and record
+various blockers or issues. designing reports both for internal users and external clients highlighting blockers
+and issues.
+closely interpret business impact from primary and secondary point of view usage.
+compile, analyze and create initial mock ups to confirm business needs and get go ahead with designs.
+use javascript, css, html  and related technologies to create ui designs and get approvals. use handlebars
+and express framework for development. make use of responsive page design methodology while creating
+pages or features.
+deploy/use cloud foundry apps in ibm cloud environment for servers and other micro-services.manage project versioning and provide support with production deployment.
+use cloud foundry and other ibm cloud features and make sure they are scalable.
+complete ownership of functionalities from front end to back end and making sure all changes are deployed.
+working with managing leadership to prioritize business and information requirements.
+worked with other team members to complete special projects and achieve project deadlines.
+conduct testing efforts on created functionality and verify all use cases pass uat.
+environment and tools: javascript, node.js, ibm cloud/bluemix, html, css, handlebars.js, express, es6,
+confluence, box.com, jira, tealium.
+university of north carolina-charlotte, north carolina: [research assistant]         [may 2017 –
+december 2017]
+academic performance analytic tool for students: [role: developer / full development and process
+owner]
+to design web based application to upload and analyze student performance based on the classroom
+engagement, when curriculum presented in terms of challenges and games. track engagement throughout
+semester and give insights.
+engage with students/professor to gather expectations and functionalities they would like to see in the
+system. try and see if there are any changes in the performance if the curricular is made more engaging like
+a game or challenge series. reward on completing challenges.
+translate stake holder requirements into different tangible deliverables such as functional specifications, user
+cases, user stories, workflow/process diagrams. to be able to scale it, aws integration was done.
+this is the research based project to try and understand the effect of modifying the curriculum for students.
+the aim was to see if there is a measurable change in performance and does that increase the engagement.
+the site would be available to only a defined set of audience; hence implementation of google oauth was
+of importance.
+responsibilities:
+write project proposal document
+use json to get the data and store in db. analyze the data. push the json files into database
+create new features and tools on the web, which help in learning. version control it on git
+environment: ruby on rails, javascript, html, css, bootstrap, cucumber, aws, ec2.
+
+university of north carolina-charlotte, north carolina: [teaching assistant]  [january 2017 –
+december 2017]
+“teaching assistant conducting classroom activities, holding coding sessions, grading tests”: [role:
+teaching assistant]
+to conduct classes in absence of professor, create tests, grade tests, conduct coding sessions. solve student
+issues and be a point of contact for any problem.
+responsibilities:
+teaching assistant for the course “software engineering”. conduct classes occasionally.
+develop full stack semester long ruby on rails projects. establish google oauth and hosting on aws. successfully setting up ec2, rds, s3, and elastic beanstalk for the projects.
+worked with students on this semester projects to help them build and deploy full featured projects at term
+end.
+help students with cucumber, capybara, aws ec2, s3, tdd with rspec. guide them in day to day activities.
+set up time lines in sprint fashion and help them to keep on track.
+environment: javascript, ruby on rails, aws, cucumber, junit, html, css, bootstrap, git.
+cybage software ltd.
+[july 2015 – july 2016]
+rakuten inc, japan                                                                                           july’
+2015 - july’ 2016
+web developer / selenium testing
+the objective of the project was to create interactive web pages for the e-commerce website and help in making
+the site and interactive and intuitive for users as well as sellers. help sellers with analytic tools which generated
+reports on the fly. another goal of the project was to support the sellers with campaigns and all the digital
+marketing of the features, products and discounts. features like discount coupon pop ups, total points on
+purchase discounts. implementing features like reports generation, payment methods etc. i was also involved in
+etl testing data and selenium user flow testing.
+responsibilities:
+closely work with business analysts in the process of requirements gathering of various aspects in terms of
+ui and tests for databases. set up test environments. create test scripts, test documentation, and document
+test results.
+code refactoring for better performance and simplicity. test-case suites refactoring to remove obsolete test
+cases.
+extensively involved in system analysis, test case requirement analysis, defining testing scope, timelines for
+development. perform regression testing, system integration testing, database testing.
+worked at client site for beta testing, war room testing and client demo.
+environment: javascript, .net, selenium, svn, git, html, css, jira, confluence, testrail, bugzilla, junit.ashish bandgar
+charlotte, nc, us
+contact information
+fwu-2da-th5@mail.dice.com
+7042811546
+summary
+being a software developer, i have been part of complex cloud platforms throughout my
+journey, resulted in working with a clients worldwide. primarily working as a multi functional full
+stack web developer has helped me get experience plus understanding on agile development
+methods. working in agile development and cloud tech stack, has helped me get hands on
+experience in micro-services environment. this has led to collaborations with cross-functional
+teams, sme's, product owners and management. additionally, i was able to get initial exposure
+and then some level of expertise in technologies like docker and kubernetes which are
+important in context of containers and encapsulating discrete components. the goal is to always
+contribute and bring full stack expertise in cloud and leverage my understanding of them in the
+cloud space, help digital transformations and be part of exciting future for tech.
+technology/programming expertise: proficient: javascript, node.js, express, reactjs,
+mongodb, mocha, chai, restfull api, jira, confluence, development cycle, cloud
+provisioning. exposure: python, html, css, angular, ibm cloud, aws, couchdb, flask,
+django, pytest, kubernetes, docker.
+work history
+total work experience: 7 years
+full stack web developer ibm
+jan 01, 2018
+research assistant university of north carolina
+may 01, 2017 charlotteteaching assistant university of north carolina
+jan 01, 2017 charlotte
+engineer cybage software india -rakuten
+jul 01, 2015
+education
+masters | university of north carolina
+masters
+skills
+agile methodologies
+algorithms
+behavior driven development
+c
+c++
+data analytics
+databases
+e commerce
+hadoop
+java enterprise edition
+javaserver pages
+jira
+manual testing
+microsoft excel
+microsoft powerpoint
+netbeans
+pl/sql
+python
+qa automation
+quality assurance
+rally
+regression testing
+selenium
+software development
+spark
+sql
+test automation
+test managementtestrail
+javascript - 5 years
+html5 - 4 years
+css - 3 years
+html - 3 years
+web development - 3 years
+jira agile - 2 years
+jquery - 2 years
+node.js - 2 years
+qa - 2 years
+docker - 1 years
+handlebars - 1 years
+jasmine - 1 years
+j2ee - 4 years
+java - 4 years
+mysql - 4 years
+angularjs - 3 years
+git - 3 years
+.net - 2 years
+amazon ec2 - 2 years
+amazon web services - 2 years
+aws elastic beanstalk - 2 years
+bootstrap - 2 years
+cucumber - 2 years
+database - 2 years
+junit - 2 years
+oauth - 2 years
+r - 2 years
+ruby - 2 years
+ruby on rails - 2 years
+selenium webdriver - 2 years
+training - 2 years
+mongodb - 1 years
+rspec - 1 years
+confluence - 2 years
+ui - 3 years
+work preferences
+likely to switch: false
+willing to relocate: true
+travel preference: 75%
+preferred location: oaustin, tx, us
+ocharlotte, nc, us
+odallas, tx, us
+work authorization:
+ous
+work documents:
+oneed h1 visa
+desired hourly rate: 37+ (usd)
+desired salary: 80,000+ (usd)
+security clearance: false
+third party: false
+employment type:
+ofull-time
+opart-time
+profile sources
+linkedin: https://www.linkedin.com/in/ashishbandgar
+github: https://github.com/ashish617b
+dice:
+https://www.dice.com/employer/talent/profile/d28accf7de349c71e0a2650fa7c2671e

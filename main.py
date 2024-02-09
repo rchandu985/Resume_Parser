@@ -1,81 +1,97 @@
-import warnings
-warnings.filterwarnings("ignore")
-import textract
-from resume_parser import resumeparse
-#import docx
-from model_keys import resume_keys
-import re
-from data_segration_model import extracted_data_processing
+from pypdf import PdfReader
+from model_keys import ResumeKeys
 import json
-from pdf2docx import Converter
-import os
+import re
+from pymongo import MongoClient
+class PdfExtratcor:
 
-class process_incoming_files:
-    availble_files=set()
-    def incoming_processing(file):
-        text = textract.process(f"incoming/{file}")
+    def __init__(self) -> None:
+        pass
 
-        op={}
+    def PdfFile(file_path):
+        reader = PdfReader(file_path)
 
-        key=[]
-
-        for r in str(text).split("\\n"):
-            r=r.replace("\\t","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","").replace("xe2x80xa2","")
-            if r.endswith(":") or "&" in r:
-                r=r.replace(":","").replace("&"," ")
-            if r.endswith(" "):
-                r=r[:len(r)-1]    
-            if r.startswith(" "):
-                r=r[1::]
-                
-            keys=resume_keys.all_keys()
-            if r!="" :
-                
-                if r.lower().replace("_"," ").replace("-"," ") in keys:
-                    #print("key",r.lower())
-                    op.update({r.lower():[]})
-                    
-                    key.append(r.lower())
-                else:
-                    if len(key)>0:
-                        #print("data",r)
-                        op[key[-1]].append(re.sub(' +', ' ', r).replace("\\t","").replace("\\","").replace("xefx82xb7","").replace("xefx81xb6","").replace("xe2x80x99","").replace("xefx80xa0","").replace("xe2x80x93","").replace("xefx80xa0","").replace("xe2x80xa2",""))
-                    else:
-                        #print("else",r,len(r))
-                        pass
-
-        output=extracted_data_processing.process(op,file)
-        process_incoming_files.availble_files.add(file)
-        #print(output)
-        #print(op)
-        
-        with open(f"output/{file.replace('.docx','')}.json","a") as f:
-            f.write(json.dumps([output],indent=4))
+        return reader
+    def TotalPages(file_path):
+        return PdfExtratcor.PdfFile(file_path)._get_num_pages()
     
-    def pdf_to_word_convert(file):
-        #import aspose.words as aw
-        pdf_file=Converter(f"incoming/{file}")
-        file_name=file.replace('.pdf','').replace('.PDF','')
-        pdf_to_word=pdf_file.convert(f"incoming/{file_name}.docx")
+    def GetPdfFileText(file_path):
 
-        process_incoming_files.incoming_processing(f"{file_name}.docx")
-
-        process_incoming_files.availble_files.add(file)
+        text=""
         
-    def load_file():
-        for file in os.listdir("incoming/"):
-            if file.endswith("docx"):
-                process_incoming_files.incoming_processing(file)
-            elif file.lower().endswith("pdf"):
-                process_incoming_files.pdf_to_word_convert(file)
-    def remove_processed_files():
-        for file in process_incoming_files.availble_files:
-            try:
-                os.remove(f"incoming/{file}")
-            except:
+        PdfFile=PdfExtratcor.PdfFile(file_path)
+
+        get_total_pages=PdfExtratcor.TotalPages(file_path)
+        
+        for page_no in range(int(get_total_pages)):
+
+
+
+            page = PdfFile.pages[page_no]
+            text+="\n"+page.extract_text()
+        
+        return text.lower()
+
+
+
+    def GetResumeBlocks(resume_text:str,stop_keywords):
+        resume_text=resume_text.replace(":","").replace("","")
+        
+        final_data={}
+        #print(resume_text)
+        
+
+        def get_exist_stop_keywords():
+
+            keywords=[]
+            rsm=resume_text.replace(":","")
+            for kw in rsm.splitlines():
+                    kw=re.sub(r'\s+', ' ', kw)
+                    if  kw.startswith(' ') or kw.endswith(" "):
+                        kw=kw.strip()
+                    if kw in stop_keywords:
+                        
+                        keywords.append(kw)
+                    #print(kw)
+                       
+            #exit()
+            keywords__=[]
+            for kws in keywords:
+                if keywords.count(kws)<=1 and kws not in keywords__:
+                    keywords__.append(kws)
+
+
+            return keywords
+        
+        kws=get_exist_stop_keywords()
+       
+        final_data={kw:"" for kw in kws}
+        
+        v=False
+        for rsm in resume_text.splitlines():
+            rsm=re.sub(r'\s+', ' ', rsm)
+            if  rsm.startswith(' ') or rsm.endswith(" "):
+                rsm=rsm.strip()
+            if rsm in kws:
+                v=True
+                c=rsm
                 continue
-process_incoming_files.load_file()
-process_incoming_files.remove_processed_files()
+            if v:
+                rsm=rsm.replace("","").replace("","").replace("","")
+                if not rsm.isspace() and len(rsm)>1:
+                    #print(rsm)
+                    final_data[c]+="\n"+rsm
 
+        return final_data
 
+input_file="incoming/Dice_Profile_Danyel_Teixeira.pdf"
 
+ResumeText=PdfExtratcor.GetPdfFileText(input_file)
+#print(ResumeText)
+x=PdfExtratcor.GetResumeBlocks(ResumeText,set(ResumeKeys.StopKeys()))
+
+con=MongoClient()
+
+table=con['local']
+
+table['test'].insert_one(x)
