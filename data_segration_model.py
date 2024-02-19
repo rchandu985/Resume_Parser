@@ -4,6 +4,9 @@ class extracted_data_processing:
     
     segregated_data={}
     
+
+    
+
     def experience_parser(data,keys):
         e_p_keys=["Work History".lower(),'internship experience',"employment experience",'work experience','professional experience','freelance experience','professional experience',"technical experience"]
         extracted_data_processing.segregated_data.update({"Work_Experience":[]})
@@ -103,6 +106,7 @@ class extracted_data_processing:
         
     def skill_processor(data,keys,file):
         sk_keys=['skills',
+                 "INTERNSHIP EXPERIENCE".lower(),"RELEVANT COURSEWORK".lower(),"GRADUATION DETAILS".lower(),
         "other skills",
         "other abilities",
         'career related skills',
