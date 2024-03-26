@@ -60,9 +60,6 @@
     "profile":[
         "personal profile",
         "professional profile",
-        "project profile",
-        "projects information",
-        "projects info",
         "career profile",
         "profile"
 
@@ -77,7 +74,11 @@
     "projects":[
         "project details",
         "projects",
-        "related course projects"
+        "related course projects",
+        "project profile",
+        "projects information",
+        "projects info",
+        "project details "
 
     ],
     "summary":[
@@ -132,7 +133,8 @@
         "areas of knowledge",
         "technical experience",
         "proficiencies",
-        "apprenticeships"
+        "apprenticeships",
+        "apprentice"
 
     ],
     "known_languages":[
